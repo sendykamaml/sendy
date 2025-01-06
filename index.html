@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can add your login validation logic
+            // For demonstration, we assume any input is valid
+            window.location.href = 'landing.html'; // Redirect to landing page
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Login ke Akun Anda</h1>
+    </header>
+
+    <main class="container my-5">
+        <form onsubmit="handleLogin(event)">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="mt-3">
+                <a href="#" class="text-primary">Lupa Kata Sandi?</a>
+                <br>
+                <a href="register.html" class="text-primary">Daftar Akun Baru</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Perpustakaan. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
